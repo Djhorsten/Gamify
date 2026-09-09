@@ -1,0 +1,66 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.layout {
+  display: grid;
+  gap: 1.5rem;
+
+  @include m.bp-up(md) {
+    grid-template-columns: minmax(0, 1fr) 18rem;
+    align-items: start;
+  }
+}
+
+.statusRow {
+  margin-bottom: 1rem;
+}
+
+.itemList {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid v.$color-line;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  padding-top: 0.85rem;
+  border-top: 1px solid v.$color-line;
+}
+
+.address {
+  p {
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+    color: v.$color-ink-muted;
+
+    &:first-child {
+      color: v.$color-ink;
+      font-weight: 600;
+    }
+  }
+}
+
+.addressTitle {
+  font-size: 1.05rem;
+  margin-bottom: 0.85rem;
+}

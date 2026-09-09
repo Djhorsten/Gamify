@@ -1,0 +1,52 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.layout {
+  display: grid;
+  gap: 2rem;
+
+  @include m.bp-up(md) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.imageWrap {
+  @include m.card;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.title {
+  font-size: 1.9rem;
+}
+
+.description {
+  color: v.$color-ink-muted;
+  line-height: 1.6;
+}
+
+.stock {
+  font-size: 0.88rem;
+  color: v.$color-ink-muted;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}

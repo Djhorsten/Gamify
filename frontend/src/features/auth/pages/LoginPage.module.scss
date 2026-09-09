@@ -1,0 +1,49 @@
+@use "../../../styles/variables" as v;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 24rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1.5rem;
+  border-bottom: 1px solid v.$color-line;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0 0 0.75rem;
+  font-family: v.$font-body;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: v.$color-ink-muted;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: transparent;
+  }
+}
+
+.active {
+  color: v.$color-ink;
+
+  &::after {
+    background: v.$color-ink;
+  }
+}

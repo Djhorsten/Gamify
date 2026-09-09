@@ -1,0 +1,14 @@
+@use "../../../styles/variables" as v;
+
+.wrapper {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.code {
+  font-family: v.$font-display;
+  font-size: 5rem;
+  font-weight: 600;
+  color: v.$color-line;
+  margin-bottom: -1.5rem;
+}

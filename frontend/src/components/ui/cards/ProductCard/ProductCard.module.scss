@@ -1,0 +1,84 @@
+@use "../../../../styles/variables" as v;
+@use "../../../../styles/mixins" as m;
+
+.card {
+  @include m.card;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    box-shadow: v.$shadow-card;
+    transform: translateY(-2px);
+  }
+}
+
+.imageLink {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  background: v.$color-line;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.outOfStockTag {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: v.$color-ink;
+  color: v.$color-bg;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+}
+
+.body {
+  padding: 0.9rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.name {
+  font-family: v.$font-display;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: v.$color-ink;
+  text-decoration: none;
+  line-height: 1.3;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+
+  @include m.bp-up(md) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer button {
+  width: 100%;
+
+  @include m.bp-up(md) {
+    width: auto;
+  }
+}

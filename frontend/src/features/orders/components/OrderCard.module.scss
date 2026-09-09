@@ -1,0 +1,49 @@
+@use "../../../styles/variables" as v;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.orderNumber {
+  font-weight: 600;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: v.$color-ink-muted;
+  margin-top: 0.15rem;
+}
+
+.itemsSummary {
+  font-size: 0.9rem;
+  color: v.$color-ink-muted;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid v.$color-line;
+}
+
+.link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: v.$color-ink;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

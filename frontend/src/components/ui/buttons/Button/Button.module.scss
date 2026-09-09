@@ -1,0 +1,77 @@
+@use "sass:color";
+@use "../../../../styles/variables" as v;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: v.$font-body;
+  font-weight: 600;
+  border-radius: v.$radius-sm;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease, opacity 0.15s ease;
+  white-space: nowrap;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+    transform: none;
+  }
+}
+
+.md {
+  padding: 0.65rem 1.25rem;
+  font-size: 0.95rem;
+}
+
+.sm {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+}
+
+.primary {
+  background: v.$color-ink;
+  color: v.$color-bg;
+
+  &:hover:not(:disabled) {
+    background: #000;
+  }
+}
+
+.secondary {
+  background: v.$color-surface;
+  border-color: v.$color-line;
+  color: v.$color-ink;
+
+  &:hover:not(:disabled) {
+    border-color: v.$color-ink;
+  }
+}
+
+.ghost {
+  background: none;
+  color: v.$color-ink;
+
+  &:hover:not(:disabled) {
+    background: v.$color-line;
+  }
+}
+
+.danger {
+  background: v.$color-error;
+  color: #fff;
+
+  &:hover:not(:disabled) {
+    background: color.adjust(v.$color-error, $lightness: -8%);
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}

@@ -1,0 +1,17 @@
+@use "../../../../styles/variables" as v;
+
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: v.$color-ink;
+}
+
+.checkbox {
+  width: 1.05rem;
+  height: 1.05rem;
+  accent-color: v.$color-ink;
+  cursor: pointer;
+}

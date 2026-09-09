@@ -1,0 +1,13 @@
+@use "../../../styles/variables" as v;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+
+  p[role="alert"] {
+    color: v.$color-error;
+    font-size: 0.85rem;
+    margin: 0;
+  }
+}

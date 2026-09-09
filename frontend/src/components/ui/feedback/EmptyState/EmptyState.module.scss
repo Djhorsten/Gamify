@@ -1,0 +1,42 @@
+@use "../../../../styles/variables" as v;
+
+.wrapper {
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  color: v.$color-ink-muted;
+}
+
+.title {
+  font-size: 1.1rem;
+  color: v.$color-ink;
+  margin-bottom: 0.4rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  max-width: 26rem;
+  margin: 0 auto;
+}
+
+.action {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: v.$color-ink;
+    color: v.$color-bg;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.65rem 1.25rem;
+    border-radius: v.$radius-sm;
+    text-decoration: none;
+
+    &:hover {
+      background: #000;
+    }
+  }
+}

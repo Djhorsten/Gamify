@@ -1,0 +1,56 @@
+@use "../../../../styles/variables" as v;
+
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid v.$color-line;
+  border-radius: v.$radius-sm;
+  overflow: hidden;
+  height: 2.35rem;
+}
+
+.step {
+  width: 2.1rem;
+  height: 100%;
+  border: none;
+  background: v.$color-surface;
+  color: v.$color-ink;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+
+  &:hover:not(:disabled) {
+    background: v.$color-line;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+}
+
+.value {
+  width: 2.75rem;
+  height: 100%;
+  border: none;
+  border-left: 1px solid v.$color-line;
+  border-right: 1px solid v.$color-line;
+  text-align: center;
+  font-family: v.$font-body;
+  font-size: 0.95rem;
+  color: v.$color-ink;
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,121 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: v.$color-surface;
+  border-bottom: 1px solid v.$color-line;
+}
+
+.bar {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  @include m.bp-up(md) {
+    padding: 1rem 2rem;
+  }
+}
+
+.logo {
+  font-family: v.$font-display;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: v.$color-ink;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.menuToggle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.4rem;
+
+  span {
+    width: 1.35rem;
+    height: 2px;
+    background: v.$color-ink;
+  }
+
+  @include m.bp-up(md) {
+    display: none;
+  }
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+
+  &.navOpen {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    background: v.$color-surface;
+    border-bottom: 1px solid v.$color-line;
+    padding: 1rem 1.25rem 1.5rem;
+    gap: 1rem;
+  }
+
+  @include m.bp-up(md) {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    padding: 0;
+    border: none;
+  }
+}
+
+.navLink {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: v.$color-ink-muted;
+  text-decoration: none;
+
+  &:hover {
+    color: v.$color-ink;
+  }
+}
+
+.active {
+  color: v.$color-ink;
+}
+
+.cartLink {
+  position: relative;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: v.$color-ink;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cartBadge {
+  background: v.$color-ink;
+  color: v.$color-bg;
+  font-size: 0.72rem;
+  font-weight: 600;
+  min-width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.3rem;
+}

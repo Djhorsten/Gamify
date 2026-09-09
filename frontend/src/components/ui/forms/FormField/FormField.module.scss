@@ -1,0 +1,25 @@
+@use "../../../../styles/variables" as v;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: v.$color-ink;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: v.$color-error;
+  margin: 0;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: v.$color-ink-muted;
+  margin: 0;
+}

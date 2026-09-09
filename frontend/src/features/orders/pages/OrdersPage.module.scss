@@ -1,0 +1,14 @@
+@use "../../../styles/mixins" as m;
+
+.list {
+  display: grid;
+  gap: 1.25rem;
+
+  @include m.bp-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.bp-up(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

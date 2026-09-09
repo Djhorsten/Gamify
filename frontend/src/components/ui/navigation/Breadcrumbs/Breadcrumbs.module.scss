@@ -1,0 +1,38 @@
+@use "../../../../styles/variables" as v;
+
+.breadcrumbs {
+  ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0 0 1rem;
+    padding: 0;
+    font-size: 0.85rem;
+    color: v.$color-ink-muted;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: v.$color-ink-muted;
+
+    &:hover {
+      color: v.$color-ink;
+      text-decoration: underline;
+    }
+  }
+
+  span:not(.separator) {
+    color: v.$color-ink;
+  }
+}
+
+.separator {
+  color: v.$color-line;
+}

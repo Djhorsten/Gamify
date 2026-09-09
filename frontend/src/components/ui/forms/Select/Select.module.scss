@@ -1,0 +1,22 @@
+@use "../../../../styles/variables" as v;
+
+.select {
+  width: 100%;
+  font-family: v.$font-body;
+  font-size: 0.9rem;
+  color: v.$color-ink;
+  background: v.$color-surface;
+  border: 1px solid v.$color-line;
+  border-radius: v.$radius-sm;
+  padding: 0.6rem 0.75rem;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-color: v.$color-ink;
+  }
+}
+
+.error {
+  border-color: v.$color-error;
+}

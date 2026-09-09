@@ -1,0 +1,53 @@
+@use "../../../../styles/variables" as v;
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 12rem;
+}
+
+.icon {
+  position: absolute;
+  left: 0.75rem;
+  width: 1.05rem;
+  height: 1.05rem;
+  color: v.$color-ink-muted;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  font-family: v.$font-body;
+  font-size: 0.95rem;
+  color: v.$color-ink;
+  background: v.$color-surface;
+  border: 1px solid v.$color-line;
+  border-radius: v.$radius-sm;
+  padding: 0.6rem 2.25rem;
+
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: v.$color-ink;
+  }
+}
+
+.clear {
+  position: absolute;
+  right: 0.6rem;
+  border: none;
+  background: none;
+  color: v.$color-ink-muted;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.25rem;
+
+  &:hover {
+    color: v.$color-ink;
+  }
+}

@@ -1,0 +1,20 @@
+@use "../../../styles/variables" as v;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formError {
+  color: v.$color-error;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.hint {
+  text-align: center;
+  font-size: 0.8rem;
+  color: v.$color-ink-muted;
+  margin: 0;
+}

@@ -1,0 +1,79 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+:root {
+  --color-bg: #{v.$color-bg};
+  --color-surface: #{v.$color-surface};
+  --color-ink: #{v.$color-ink};
+  --color-ink-muted: #{v.$color-ink-muted};
+  --color-line: #{v.$color-line};
+  --color-error: #{v.$color-error};
+  --color-success: #{v.$color-success};
+  --color-accent: #{v.$color-accent};
+
+  --font-display: #{v.$font-display};
+  --font-body: #{v.$font-body};
+  --radius-sm: #{v.$radius-sm};
+  --radius-md: #{v.$radius-md};
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: v.$color-bg;
+  color: v.$color-ink;
+  font-family: v.$font-body;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: v.$font-display;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+
+  @include m.bp-up(md) {
+    padding: 0 2rem;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid v.$color-ink;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
